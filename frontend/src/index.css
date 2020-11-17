@@ -4,6 +4,7 @@
   --color-border: #E0EEFF;
   --color-white: #FFFFFF;
   --color-background: #F2F2F2;
+  --color-separator: #F0F5FA;
 }
 
 body {
@@ -19,4 +20,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-

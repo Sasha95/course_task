@@ -1,6 +1,5 @@
 import React from "react"
 import Navbar from "react-bootstrap/esm/Navbar"
-import commonStyle from "../../common/commonStyle.module.css"
 import styles from "./header.module.css"
 import { Input } from ".."
 
@@ -14,9 +13,6 @@ export const Header = () => {
             <Navbar.Collapse className="justify-content-end">
                 <Navbar.Text>
                     <Input />
-                    {/* <div className={commonStyle.iconContainer}>
-                        <ReactLogo className={commonStyle.icon} />
-                    </div> */}
                 </Navbar.Text>
             </Navbar.Collapse>
         </Navbar>

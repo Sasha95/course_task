@@ -1,0 +1,10 @@
+.imageContainer {
+    display: flex;
+    height: 95px;
+    align-items: center;
+    justify-content: center;
+}
+
+.separator {
+    border: 2px solid var(--color-separator);
+}

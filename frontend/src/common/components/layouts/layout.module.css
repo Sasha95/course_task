@@ -5,3 +5,7 @@
 .background {
     background-color: var(--color-background);
 }
+
+.sidebarContainer {
+    max-width: 96px;
+}

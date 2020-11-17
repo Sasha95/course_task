@@ -1,0 +1,9 @@
+.containerPrew {
+    position: relative;
+}
+
+.imgPrew {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
