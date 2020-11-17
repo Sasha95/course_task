@@ -1,0 +1,21 @@
+.container {
+    max-width: 288px;
+    margin: auto;
+    position: relative;
+    display: flex;
+}
+
+.input {
+    border: none;
+    border-bottom: 1px solid var(--color-border);
+    padding-right: 30px;
+}
+.input:focus {
+    outline: none;
+}
+
+.search {
+    position: absolute;
+    top: 0;
+    right: 10px;
+}

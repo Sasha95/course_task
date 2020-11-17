@@ -1,11 +1,13 @@
 import React from 'react';
-import { Header } from './modules/header/Header';
+import { MainLayout } from './common/components/layouts/MainLayout';
+import { MenuLayout } from './common/components/layouts/MenuLayout';
 
 function App() {
   return (
-    <div>
-      <Header />
-    </div>
+    <>
+      <MainLayout />
+      <MenuLayout />
+    </>
   );
 }
 

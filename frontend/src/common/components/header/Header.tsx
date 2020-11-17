@@ -1,7 +1,8 @@
 import React from "react"
 import Navbar from "react-bootstrap/esm/Navbar"
-
+import commonStyle from "../../common/commonStyle.module.css"
 import styles from "./header.module.css"
+import { Input } from ".."
 
 export const Header = () => {
     return (
@@ -12,7 +13,10 @@ export const Header = () => {
             <Navbar.Toggle />
             <Navbar.Collapse className="justify-content-end">
                 <Navbar.Text>
-                    Signed in as: <a href="#login">Mark Otto</a>
+                    <Input />
+                    {/* <div className={commonStyle.iconContainer}>
+                        <ReactLogo className={commonStyle.icon} />
+                    </div> */}
                 </Navbar.Text>
             </Navbar.Collapse>
         </Navbar>

@@ -1,0 +1,11 @@
+.iconContainer:hover {
+    cursor: pointer;
+}
+
+.iconContainer:hover .icon path {
+    fill: var(--color-blue);
+}
+
+.icon path {
+    fill: var(--color-gray);
+}

@@ -7,6 +7,6 @@
 .logo {
     width: 32px;
     height: 32px;
-    composes: blue from "../../core/theme/commonStyle.module.css";
+    background-color: var(--color-blue);
     border-radius: 30px;
 }
