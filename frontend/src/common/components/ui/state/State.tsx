@@ -1,5 +1,5 @@
 import React from "react"
-import { States } from "../../../../types/Types"
+import { States } from "../../../../types/States"
 
 interface IProps {
     state: States;

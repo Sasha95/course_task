@@ -1,0 +1,27 @@
+.text {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--color-black);
+}
+
+.new {
+    composes: text;
+    color: var(--color-blue);
+    cursor: pointer;
+}
+
+.description {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--color-gray);
+}
+
+.container {
+    max-width: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}

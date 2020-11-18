@@ -9,3 +9,15 @@
 .icon path {
     fill: var(--color-gray);
 }
+
+.cardContainer {
+    height: 256px;
+    width: 288px;
+    background: var(--color-white);
+    box-shadow: 0px 2px 20px 4px rgba(41, 55, 74, 0.08);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

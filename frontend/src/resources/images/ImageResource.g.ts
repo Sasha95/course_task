@@ -5,6 +5,7 @@ import { ReactComponent as Book } from "./book.svg"
 import { ReactComponent as Plus } from "./plus.svg"
 import { ReactComponent as Settings } from "./settings.svg"
 import { ReactComponent as Three_dots } from "./three_dots.svg"
+import Avatar from "./Avatar.png"
 
 
 export const ImageResources = {
@@ -15,4 +16,5 @@ export const ImageResources = {
     Plus,
     Settings,
     Three_dots,
+    Avatar,
 }
