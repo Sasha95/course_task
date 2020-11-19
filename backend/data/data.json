@@ -3,7 +3,7 @@
         "id": 1,
         "title": "From House to “Home”",
         "status": 2,
-        "img": "home.png",
+        "img": "/static/home.png",
         "date": "2020-11-15",
         "data": {
             "Getting started": {
@@ -24,7 +24,7 @@
         "id": 2,
         "title": "Speed reading: How to",
         "status": 0,
-        "img": "how_to.png",
+        "img": "/static/how_to.png",
         "date": "2020-11-16",
         "data": {
             "Getting started": {
@@ -45,7 +45,7 @@
         "id": 3,
         "title": "Ecology is easy",
         "status": 2,
-        "img": "ecology.png",
+        "img": "/static/ecology.png",
         "date": "2020-11-14",
         "data": {
             "Getting started": {
@@ -66,7 +66,7 @@
         "id": 4,
         "title": "The Barista Hacks",
         "status": 0,
-        "img": "barista.png",
+        "img": "/static/barista.png",
         "date": "2020-11-12",
         "data": {
             "Getting started": {
@@ -87,7 +87,7 @@
         "id": 5,
         "title": "Product photography 101",
         "status": 0,
-        "img": "product.png",
+        "img": "/static/product.png",
         "date": "2020-11-16",
         "data": {
             "Getting started": {
@@ -108,7 +108,7 @@
         "id": 6,
         "title": "Traveling on a buget",
         "status": 3,
-        "img": "traveling.png",
+        "img": "/static/traveling.png",
         "date": "2020-11-15",
         "data": {
             "Getting started": {

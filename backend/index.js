@@ -1,6 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const data = require("./data.json")
+const data = require("./data/data.json")
 
 var cors = require('cors')
 
@@ -22,6 +22,6 @@ app.use((_, res, next) => {
 });
 app.use(bodyParser.json());
 app.use("/api", router);
-app.use('/static', express.static(__dirname + "/images"))
+app.use('/static', express.static(__dirname + "/data/images"))
 
 app.listen(port, () => console.log(`server running on port ${port}`));
