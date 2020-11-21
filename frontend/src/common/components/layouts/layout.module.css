@@ -15,6 +15,10 @@
     color: var(--color-gray);
 }
 
+.prewContainer {
+    /* margin-left: 32px; */
+}
+
 .text {
     font-style: normal;
     font-weight: 600;

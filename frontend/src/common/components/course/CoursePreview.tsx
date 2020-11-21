@@ -1,9 +1,11 @@
-import React from "react"
-import { Col, Container, Row } from "react-bootstrap"
+import React, { useState } from "react"
+import { Col } from "react-bootstrap"
 import { ImageResources } from "../../../resources/images/ImageResource.g"
 import { States } from "../../../types/States"
 import styles from "./prew.module.css"
 import commonStyles from "../../commonStyle.module.css"
+import classnames from "classnames"
+import { State } from "../ui/state/State"
 
 interface IProps {
     title: string;
@@ -13,20 +15,23 @@ interface IProps {
 }
 
 export const CoursePreview = ({ title, date, state, img }: IProps) => {
+    const [showDialog, setShowDialog] = useState(false);
+
     return (
-        <div>
-            <Row className={styles.container}>
-                <img className={styles.img} src={img} alt={title} />
-            </Row>
-            <Row>
-                <Row>
+        <div className={classnames(commonStyles.cardContainer)}>
+            <div className={styles.container}>
+                <img src={img} alt={title} />
+                <State state={state} />
+            </div>
+            <div className={styles.textWrapper}>
+                <div>
                     <Col>{title}</Col>
                     <Col>{date}</Col>
-                </Row>
-                <Col className={commonStyles.iconContainer}>
+                </div>
+                <div className={classnames(commonStyles.iconContainer, styles.img)}>
                     <ImageResources.ThreeDots className={commonStyles.icon} />
-                </Col>
-            </Row>
+                </div>
+            </div>
         </div>
     )
 }

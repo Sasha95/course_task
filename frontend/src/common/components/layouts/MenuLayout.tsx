@@ -38,18 +38,16 @@ export const MenuLayout = () => {
                         </Col>
                     </Row>
                     <Row className={"m-0"}>
-                        <Col className={"p-0"}>
-                            <CreateCourse />
-                        </Col>
+                        <CreateCourse />
                         {courses && courses.map((course, index) =>
-                            <Col key={index} className={"p-0"}>
+                            <div key={index} className={styles.prewContainer}>
                                 <CoursePreview
                                     title={course.title}
                                     state={course.status}
                                     date={course.date}
                                     img={URL + course.img}
                                 />
-                            </Col>
+                            </div>
                         )}
                     </Row>
                 </>}

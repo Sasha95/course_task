@@ -1,5 +1,5 @@
-import React, { useState } from "react"
-import { Row } from "react-bootstrap"
+import React, { useEffect, useState } from "react"
+import { Form, Row } from "react-bootstrap"
 import { ImageResources } from "../../../resources/images/ImageResource.g"
 import commonStyles from "../../commonStyle.module.css"
 import styles from "./create.module.css"
@@ -13,18 +13,30 @@ export const CreateCourse = React.memo(() => {
     const [showModal, setShowModal] = useState(false);
     const { register, setValue, handleSubmit, errors } = useForm<ICourse>();
 
+    const onSubmit = handleSubmit((data: any) => console.log(data));  
     const onClose = () => { setShowModal(false) }
-    const onSave = () => { }
+    const onSave = () => { onSubmit() }
     const onCreate = () => { setShowModal(true) }
+
 
     return (
         <>
             <ModalComponent show={showModal} handleClose={onClose} title={"Course add"} onSave={onSave}>
-                <InputForm controlId={"title"} label={"Name"} rowCount={1} type={"textarea"} placeholder={"input name"} />
-                <InputForm controlId={"get"} label={"Get started"} placeholder={"input get started"} rowCount={3} type={"textarea"} />
+                <Form onSubmit={onSubmit}>
+                    <InputForm register={register} controlId={"title"} label={"Name"} type={"textarea"} rowCount={1} placeholder={"input name"} />
+                    <hr />
+                    <InputForm register={register} controlId={"get_first"} label={"Get started"} rowCount={2} type={"textarea"} />
+                    <InputForm register={register} controlId={"get_second"} label={"Description"} rowCount={3} type={"textarea"} />
+                    <hr />
+                    <InputForm register={register} controlId={"what_first"} label={"What to read?"} rowCount={2} type={"textarea"} />
+                    <InputForm register={register} controlId={"what_second"} label={"Description"} rowCount={3} type={"textarea"} />
+                    <hr />
+                    <InputForm register={register} controlId={"how_first"} label={"How to read?"} rowCount={2} type={"textarea"} />
+                    <InputForm register={register} controlId={"how_second"} label={"Description"} rowCount={3} type={"textarea"} />
+                </Form>
             </ModalComponent>
 
-            <div className={classnames(commonStyles.cardContainer)}>
+            <div className={classnames(commonStyles.cardContainer, styles.wrapper)}>
                 <div className={styles.container} onClick={onCreate}>
                     <Row className={classnames(commonStyles.iconContainer, styles.text)}>
                         <div className={styles.container}>

@@ -1,0 +1,27 @@
+.container {
+    position: absolute;
+    top: 16px; 
+    right: 16px; 
+    padding: 3px 8px 3px 8px;
+    border-radius: 4px;
+}
+
+.draft {
+    composes: container;
+    background-color: var(--color-draft);
+}
+
+.published {
+    composes: container;
+    background-color: var(--color-published);
+}
+
+.deleted {
+    composes: container;
+    background-color: var(--color-deleted);
+}
+
+.archived {
+    composes: container;
+    background-color: var(--color-archived);
+}

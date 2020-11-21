@@ -6,6 +6,10 @@
   --color-background: #F2F2F2;
   --color-separator: #F0F5FA;
   --color-black: #001C33;
+  --color-draft: #FEF9E6;
+  --color-published: #E7FFE6;
+  --color-deleted: #F2A8A8;
+  --color-archived: #FBE79C;
 }
 
 body {

@@ -10,7 +10,7 @@ interface IProps {
 
 export const ModalComponent: React.FC<IProps> = ({ handleClose, onSave, show, title, children }) => {
     return (
-        <Modal show={show} onHide={handleClose}>
+        <Modal show={show} onHide={handleClose} animation={false} size={"lg"}>
             {title && <Modal.Header closeButton>
                 <Modal.Title>{title}</Modal.Title>
             </Modal.Header>}
