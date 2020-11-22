@@ -48,8 +48,8 @@ export const DropMenu = React.memo(({ status, id, onClose }: IProps) => {
 
     return (
         <Dropdown.Menu>
-            {state.map((item, index) => (
-                <div onClick={() => {handleClick(id, item)}} key={index} className={classnames(styles.container)}>
+            {state.map((item) => (
+                <div onClick={() => {handleClick(id, item)}} key={id} className={classnames(styles.container)}>
                     <div className={styles.image}>{imgChecker(StatusStates[item] as Status)}</div>
                     <div className={commonStyles.iconContainer}>
                         <div>{StatusStates[item] as Status}</div>
