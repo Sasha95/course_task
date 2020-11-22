@@ -1,23 +1,17 @@
-import { States } from "./States";
+import { KeyStates } from "./States";
+
+export interface IData {
+    caption: {
+        first: string;
+        second: string;
+    }
+}
 
 export interface ICourse {
-    id?: number;
+    id: number;
     title: string;
-    status: States;
+    status: KeyStates;
     img: string;
     date: string;
-    data: {
-        get: {
-            first: string;
-            second: string;
-        };
-        what: {
-            first: string;
-            second: string;
-        };
-        how: {
-            first: string;
-            second: string;
-        };
-    }
+    data: IData[];
 }

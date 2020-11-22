@@ -1,3 +1,10 @@
+.container {
+    flex-direction: column;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+}
+
 .imageContainer {
     display: flex;
     height: 95px;
@@ -8,3 +15,14 @@
 .separator {
     border: 2px solid var(--color-separator);
 }
+
+.activateLink {
+    color: var(--color-blue);
+}
+
+.avatarContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+

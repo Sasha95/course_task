@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { Form, Row } from "react-bootstrap"
-import { ImageResources } from "../../../resources/images/ImageResource.g"
-import commonStyles from "../../commonStyle.module.css"
+import { ImageResources } from "../../../../../resources/images/ImageResource.g"
+import commonStyles from "../../../../../common/commonStyle.module.css"
 import styles from "./create.module.css"
 import classnames from "classnames"
-import { ModalComponent } from "../modal/ModalComponent"
+import { ModalComponent } from "../../../modal/ModalComponent"
 import { useForm } from "react-hook-form"
-import { ICourse } from "../../../types/ICourse"
-import { InputForm } from "../ui/form/InputForm"
+import { ICourse } from "../../../../../types/ICourse"
+import { InputForm } from "../../../ui/form/InputForm"
 
 export const CreateCourse = React.memo(() => {
     const [showModal, setShowModal] = useState(false);
-    const { register, setValue, handleSubmit, errors } = useForm<ICourse>();
+    const { register, handleSubmit } = useForm<ICourse>();
 
-    const onSubmit = handleSubmit((data: any) => console.log(data));  
+    const onSubmit = handleSubmit((data: any) => console.log(data, "created"));  
     const onClose = () => { setShowModal(false) }
     const onSave = () => { onSubmit() }
     const onCreate = () => { setShowModal(true) }

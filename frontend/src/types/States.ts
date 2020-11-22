@@ -1,9 +1,14 @@
-export const StatusStates = {
-    0: "Draft",
-    1: "Archived",
-    2: "Published",
-    3: "Deleted",
-} 
+export enum StatusStates {
+    "Draft" = 0,
+    "Archived" = 1,
+    "Published" = 2,
+    "Deleted" = 3,
+    "All" = 4,
+};
 
 export type States = keyof typeof StatusStates;
-// export type State1 = typeof States[keyof typeof States];
+export type KeyStates = Extract<keyof States, StatusStates>;
+
+type SetDifference<A, B> = A extends B ? never : A;
+
+export type Status = SetDifference<States, "All">

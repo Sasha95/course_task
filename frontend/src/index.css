@@ -10,6 +10,8 @@
   --color-published: #E7FFE6;
   --color-deleted: #F2A8A8;
   --color-archived: #FBE79C;
+  --color-hover: #F5F5FF;
+  --color-click: #E0E9FF;
 }
 
 body {

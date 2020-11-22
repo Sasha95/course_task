@@ -1,3 +1,5 @@
+import querystring from 'query-string';
+
 export type IHttpMethods = "GET" | "POST" | "PUT" | "DELETE";
 
 interface IResponse<R> {
@@ -15,7 +17,9 @@ export const baseFetch = async <P, R>(
 ): Promise<IResponse<R>> => {
   try {
     const bodyObj = method !== "GET" ? { body: JSON.stringify(params) } : {};
-    const res = await fetch(`/api/${url}`, {
+    const hasParams = Object.keys(params).length > 0;
+    
+    const res = await fetch(`/api/${url}${hasParams ? '?' : ''}${querystring.stringify(params as any)}`, {
       method,
       ...bodyObj,
       headers: {

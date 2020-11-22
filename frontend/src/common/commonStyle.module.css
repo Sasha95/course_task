@@ -22,4 +22,16 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: self-start;
+
+    margin-bottom: 32px;
+}
+
+.cardContainer:hover{
+    cursor: pointer;
+}
+
+.loader {
+    position: fixed; /* or absolute */
+    top: 50%;
+    left: 50%;
 }

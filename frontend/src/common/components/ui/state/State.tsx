@@ -1,33 +1,33 @@
 import React, { useMemo } from "react"
-import { States, StatusStates } from "../../../../types/States"
+import { States } from "../../../../types/States"
 import styles from "./state.module.css"
 import classnames from "classnames"
 
 interface IProps {
     state: States;
+    style?: string;
 }
 
 const background = (state: States) => {
     switch (state) {
-        case 0:
+        case "Draft":
             return styles.draft
-        case 1:
+        case "Archived":
             return styles.archived
-        case 2:
+        case "Published":
             return styles.published
-        case 3:
+        case "Deleted":
             return styles.deleted
         default:
             break;
     }
 }
 
-export const State = ({ state }: IProps) => {
+export const State = React.memo(({ state, style }: IProps) => {
     const bkg = useMemo(() => background(state), [state])
-    const status = StatusStates[state]
     return (
-        <div className={classnames(styles.container, bkg)}>
-            {status}
+        <div className={classnames(styles.container, bkg, style)}>
+            {state}
         </div>
     )
-}
+})

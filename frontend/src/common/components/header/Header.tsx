@@ -3,7 +3,10 @@ import Navbar from "react-bootstrap/esm/Navbar"
 import styles from "./header.module.css"
 import { Input } from ".."
 
-export const Header = () => {
+
+
+export const Header = React.memo(() => {
+
     return (
         <Navbar className={styles.container}>
             <Navbar.Brand href="#home">
@@ -17,4 +20,4 @@ export const Header = () => {
             </Navbar.Collapse>
         </Navbar>
     )
-}
+})

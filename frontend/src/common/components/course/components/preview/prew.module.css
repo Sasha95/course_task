@@ -12,3 +12,7 @@
     display: flex;
     padding-bottom: 10px;
 }
+
+.opacityBtn {
+    opacity: 0;
+}

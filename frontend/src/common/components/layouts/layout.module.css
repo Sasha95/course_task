@@ -2,8 +2,14 @@
     height: calc(100vh - 64px);
 }
 
+.wrapper {
+    padding-left: 32px;
+    padding-right: 0px;
+}
+
 .background {
     background-color: var(--color-background);
+    padding-right: 32px;
 }
 
 .sidebarContainer {
@@ -16,7 +22,7 @@
 }
 
 .prewContainer {
-    /* margin-left: 32px; */
+    margin-left: 32px;
 }
 
 .text {

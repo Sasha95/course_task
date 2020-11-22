@@ -2,15 +2,40 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const data = require("./data/data.json")
 
-var cors = require('cors')
+var cors = require('cors');
 
 const app = express();
 app.use(cors())
 const router = express.Router();
 const port = process.env.PORT || 7000;
 
-router.get("/data", async (req, res) => {
-    res.send(JSON.stringify(data))
+const filterStatus = (status) => {
+    return data.filter(x => x.status == status && x.status != 3)
+}
+const getData = (courses = data) => {
+    return courses.filter(x => x.status != 3)
+}
+
+router.get("/search", async (req, res) => {
+    const query = req.query
+    if (query.title && query.title != '') {
+        const filterData = data.filter(x => x.title.includes(query.title))
+        res.send(JSON.stringify(getData(filterData)))
+    }else{
+        res.send(JSON.stringify(getData()))
+    }
+});
+router.get("/filter", async (req, res) => {
+    const query = req.query
+    const isDigit = Number.parseInt(query.status)
+    if (query.status && isDigit != NaN && isDigit >= 0 && isDigit <= 3) {
+        return res.send(JSON.stringify(filterStatus(query.status)))
+    }else if(isDigit != NaN){
+        res.send(JSON.stringify(getData()))
+    }
+    else {
+        return res.send([])
+    }
 });
 
 app.use((_, res, next) => {
