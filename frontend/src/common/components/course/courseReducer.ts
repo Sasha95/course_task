@@ -47,7 +47,7 @@ export const coursesReducer = reducerWithInitialState<ICourseState>(CourseInitia
     .case(courseActions.changeStatus, (state, { id, status }) => {
         let courses = state.courses
         
-        const course = state.courses?.filter(x => x.id === id)[0]
+        const course = state.courses?.find(x => x.id === id)
         
         if (courses && course) {
             const newCourse = {...course, status: status} as ICourse

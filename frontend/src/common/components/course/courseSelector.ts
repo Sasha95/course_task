@@ -5,6 +5,6 @@ export const CourseSelector = () => createSelector(
     (_: IAppState, id: number) => id,
     ({ courses }) => courses.courses,
     (id, courses) => {
-        return courses? courses?.filter(x => x.id === id)[0]: null
+        return courses? courses?.find(x => x.id === id): null
     }
 )
