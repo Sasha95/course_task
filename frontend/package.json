@@ -61,7 +61,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:7000",
+  "proxy": "http://backend:7000",
   "devDependencies": {
     "redux-devtools-extension": "^2.13.8",
     "typescript-plugin-css-modules": "^2.8.0"
