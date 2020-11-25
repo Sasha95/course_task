@@ -1,4 +1,4 @@
-import { CourseInitialState, ICourseState } from "../common/components/course/courseState";
+import { CourseInitialState, ICourseState } from "../modules/course/courseState";
 
 export interface IAppState {
     courses: ICourseState,

@@ -1,6 +1,6 @@
 import { Action, combineReducers } from "redux";
 import { ThunkAction } from "redux-thunk";
-import { coursesReducer } from "../common/components/course/courseReducer";
+import { coursesReducer } from "../modules/course/courseReducer";
 import { IAppState } from "./appState";
 
 export const createMainReducer = () =>

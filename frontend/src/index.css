@@ -1,6 +1,9 @@
+@import "./resources/fonts/inter.css";
+
 :root {
   --color-blue: #4B00FF;
   --color-gray: #8A9AA8;
+  --color-black-gray: #475B6B;
   --color-border: #E0EEFF;
   --color-white: #FFFFFF;
   --color-background: #F2F2F2;
@@ -16,9 +19,7 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: Inter !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

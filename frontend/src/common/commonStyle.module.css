@@ -17,21 +17,23 @@
     box-shadow: 0px 2px 20px 4px rgba(41, 55, 74, 0.08);
     border-radius: 8px;
     overflow: hidden;
-    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: self-start;
-
     margin-bottom: 32px;
 }
 
-.cardContainer:hover{
+.cardContainer:hover {
     cursor: pointer;
 }
 
 .loader {
-    position: fixed; /* or absolute */
+    position: fixed;
     top: 50%;
     left: 50%;
+}
+
+.decorationNone {
+    text-decoration: none !important;
 }
